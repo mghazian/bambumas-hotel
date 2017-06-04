@@ -7,7 +7,7 @@ class Model_user extends CI_Model {
     }
             
     function  ambil_data(){
-        $user= $this->db->get('user');
+        $user= $this->db->get('data_staff');
         return $user;
     }
     

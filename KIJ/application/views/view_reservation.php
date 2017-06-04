@@ -29,11 +29,9 @@
           <label for="mail">No Telp: </label>
           <input type="email" id="mail" name="telp">
           
+          <label for="date">Tanggal pesan: </label>
+          <input type="date"  id="date" name="date" >
          
-          <input type="hidden"  id="date" name="date" >
-          <script type="text/javascript">
-            document.getElementById('date').value = Date();
-           </script> 
           
         </fieldset>
         
