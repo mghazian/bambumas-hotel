@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
-<?php include 'view_head.php' ?>
+<?php include 'view_head_reservation.php' ?>
 <body>
-<?php include'view_navbar_client.php' ;?>
+<?php include'view_navbar_staff.php' ;?>
 
 <div class="banner">
    	  <div class="container_wrap">

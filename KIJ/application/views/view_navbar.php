@@ -1,19 +1,19 @@
 <div class="header">
 		   <div class="col-sm-8 header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="assets/homepage/images/logo.png" alt=""/></a>
+                                             <a href="index.html"><img src="<?php echo base_url('assets/homepage/images/logo.png'); ?> " alt=""/></a>
 					 </div>
 					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="assets/homepage/images/nav.png" alt="" /></a>
+                                             <a class="toggleMenu" href="#"><img src="<?php echo base_url('assets/homepage/images/nav.png');?>" alt="" /></a>
 						    <ul class="nav" id="nav">
-						    	<li class="active"><a href="index.html">Home</a></li>
-						    	<li><a href="rooms.html">Rooms</a></li>
-						    	<li><a href="news.html">News</a></li>
-						    	<li><a href="gallery.html">Gallery</a></li>
-						    	<li><a href="404.html">Blog</a></li>
+						    	<li class="active"><a href="<?php echo base_url('');?>">Home</a></li>
+						    	
+						    	<li><a href="<?php echo base_url('index.php/home/reserve');?> ">Reservation</a></li>
+						    	
+						    	
 								<div class="clearfix"></div>
 							</ul>
-							<script type="text/javascript" src="assets/homepage/js/responsive-nav.js"></script>
+                                             <script type="text/javascript" src="<?php echo base_url('assets/homepage/js/responsive-nav.js') ?>"></script>
 				    </div>	
 				     <!-- start search-->
 				      <div class="search-box">
@@ -26,8 +26,8 @@
 							</div>
 						</div>
 						<!----search-scripts---->
-						<script src="assets/homepage/js/classie.js"></script>
-						<script src="assets/homepage/js/uisearch.js"></script>
+                                                <script src="<?php echo base_url('assets/homepage/js/classie.js') ?>"></script>
+						<script src="<?php echo base_url('assets/homepage/js/uisearch.js') ?>"></script>
 						<script>
 							new UISearch( document.getElementById( 'sb-search' ) );
 						</script>
@@ -35,7 +35,7 @@
 	    		    <div class="clearfix"></div>
 	    	    </div>
 	            <div class="col-sm-4 header_right">
-	    		      <div id="loginContainer"><a href="#" id="loginButton"><img src="assets/homepage/images/login.png"><span>Login</span></a>
+                        <div id="loginContainer"><a href="#" id="loginButton"><img src="<?php echo base_url('assets/homepage/images/login.png') ?>"><span>Login</span></a>
 						    <div id="loginBox">                
 						        <form role="form" id="loginForm" action="<?php echo base_url('index.php/home/aksi_login') ?>" method="post" >
 						                <fieldset id="body">

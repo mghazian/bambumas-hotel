@@ -43,7 +43,7 @@ class Home extends CI_Controller {
  
 			$this->session->set_userdata($data_session);
  
-			redirect('c_client');
+			redirect('c_staff');
                         
                         
                         }
@@ -59,6 +59,10 @@ class Home extends CI_Controller {
 		redirect(base_url());
 	}    
         
+        function reserve(){
+            $this->load->view('view_reservation');
+              $data['user']= $this->model_user->ambil_data()->result();
+        }
         
         
 }
