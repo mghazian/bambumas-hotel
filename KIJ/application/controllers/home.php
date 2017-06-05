@@ -19,34 +19,29 @@ class Home extends CI_Controller {
 		
                 
                 $where = array(
-			'email' => $email,
-			'password' => $password
-                        
-                        
+			'username' => $email
 			);
-                
-                $datalogin = $this->model_user->cek_login('user',$where);
-                $datalogin = $datalogin->result_array();
-                echo var_dump($datalogin);
-                $nama = $datalogin[0]['nama_user'];
-               
                 
 		$cek = $this->model_user->cek_login('user',$where)->num_rows();
 		if($cek > 0 ){
- 
-			$data_session = array(
-				'email' => $email,
-				'status' => "login",
-                                'nama_user'=>$nama
-                       
-				);
- 
-			$this->session->set_userdata($data_session);
- 
-			redirect('c_staff');
-                        
-                        
-                        }
+			
+			$datalogin = $this->model_user->cek_login ('user', $where)->row_array();
+			if (password_verify ($password, $datalogin['pass']))
+			{
+				$data_session = array(
+					'email' => $email,
+					'status' => "login",
+					'nama_user'=> $datalogin['nama']
+			
+					);
+	
+				$this->session->set_userdata($data_session);
+	
+				redirect('c_staff');	
+			}
+
+			else echo "Username atau password salah !";
+		}
            
                           
 		else{
